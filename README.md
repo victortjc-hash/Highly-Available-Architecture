@@ -35,4 +35,14 @@ Added Inbound Security Group for MYSQL
 Set Up DNS Failover with Route 53
 Even with Multi-AZ infrastructure, you need a way to intelligently route user traffic based on system health. In this section, you'll configure Route 53 to route traffic to your application via the ALB and automatically failover if the ALB becomes unhealthy.
 
+In this section, I will build:
+A Hosted Zone to manage your domain's DNS records
+A Health Check to monitor the application’s availability via the ALB
+A Failover Routing Policy using Route 53
+An optional backup record (e.g., static S3 site) for failover
+
+Create a Hosted Zone.
+<img width="990" height="752" alt="Screenshot 2026-01-04 at 9 31 41 AM" src="https://github.com/user-attachments/assets/42ac00e0-b2ad-4ff7-867d-223f4ab854d6" />
+
+
 
