@@ -19,3 +19,20 @@ Amazon EFS – Shared storage across EC2 instances
 
 Architecture Diagram
 <img width="816" height="534" alt="Screenshot 2026-01-03 at 5 41 55 PM" src="https://github.com/user-attachments/assets/d436ad57-05e5-414a-bc20-d076c219db83" />
+
+
+
+
+An Amazon RDS MySQL instance with Multi-AZ failover
+In this section, I will build the following:
+A private database layer that is only accessible from the EC2 application instances
+Secure access via Security Groups
+Automatic standby replica for failover handling
+
+Added Inbound Security Group for MYSQL 
+<img width="1700" height="671" alt="Screenshot 2026-01-04 at 8 54 16 AM" src="https://github.com/user-attachments/assets/bbb62332-433c-4a54-98b8-5f652cdc6fc3" />
+
+Set Up DNS Failover with Route 53
+Even with Multi-AZ infrastructure, you need a way to intelligently route user traffic based on system health. In this section, you'll configure Route 53 to route traffic to your application via the ALB and automatically failover if the ALB becomes unhealthy.
+
+
